@@ -20,6 +20,14 @@ class Product
         echo "Product object destroyed.<br>";
     }
     
+    public function getPrice(){
+        return $this->price;
+    }
+
+    public function getStock(){
+        return $this->stock;
+    }
+
     public function showDetails()
     {
         echo "Product: " . $this->name . "<br>";
