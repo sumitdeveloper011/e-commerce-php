@@ -67,6 +67,9 @@ class Customer extends Person
 
     public function introduce() : void
     {
-        echo "Hello, I am customer {$this->name}.";
+        parent::introduce();
+
+        echo PHP_EOL;
+        echo "I am a valued customer.";
     }
 }
