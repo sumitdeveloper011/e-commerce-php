@@ -2,8 +2,8 @@
 class Product
 {
     public string $name;
-    public float $price;
-    public int $stock;
+    private float $price;
+    private int $stock;
 
     public function __construct(
         string $name, 
