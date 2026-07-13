@@ -13,6 +13,11 @@ class Person
     {
         return $this->email;
     }// Empty parent class for now
+
+    public function introduce() : void
+    {
+        echo "Hello, I am customer {$this->name}.";
+    }
 }
 
 class Customer extends Person
@@ -58,5 +63,10 @@ class Customer extends Person
     public function placeOrder()
     {
 
+    }
+
+    public function introduce() : void
+    {
+        echo "Hello, I am customer {$this->name}.";
     }
 }
