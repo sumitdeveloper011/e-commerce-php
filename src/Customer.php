@@ -4,6 +4,12 @@ class Person
     protected string $name;
     protected string $email;
 
+    public function __construct(string $name, string $email)
+    {
+        $this->name = $name;
+        $this->email = $email;
+    }
+
     public function getName(): string
     {
         return $this->name;
@@ -28,10 +34,11 @@ class Customer extends Person
     public function __construct(
         string $name,
         string $email,
+        string $password,
         string $phone
     ) {
-        $this->name = $name;
-        $this->email = $email;
+        parent::__construct($name, $email);
+        $this->password = $password;
         $this->phone = $phone;
     }
 
