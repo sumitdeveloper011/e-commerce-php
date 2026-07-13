@@ -1,8 +1,22 @@
 <?php 
-class Customer
+class Person
 {
-    private $name;
-    private $email;
+    protected string $name;
+    protected string $email;
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }// Empty parent class for now
+}
+
+class Customer extends Person
+{
     private $password;
     public string $phone;
 
@@ -25,18 +39,6 @@ class Customer
     {
         echo "Customer: " . $this->name . "<br>";
         echo "Email: " . $this->email . "<br>";
-    }
-
-     // Read
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    // Read
-    public function getEmail()
-    {
-        return $this->email;
     }
 
     // Write Only
