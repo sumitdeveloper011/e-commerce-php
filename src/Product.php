@@ -20,15 +20,37 @@ class Product
         echo "Product object destroyed.<br>";
     }
     
-    public function getPrice(){
+    public function getPrice(): float
+    {
         return $this->price;
     }
 
-    public function getStock(){
+    public function getStock(): int
+    {
         return $this->stock;
     }
 
-    public function showDetails()
+    public function isInStock(): bool
+    {
+        return $this->stock > 0;
+    }
+
+    public function formattedPrice(): string
+    {
+        return "₹" . number_format($this->price, 2);
+    }
+
+    public function setPrice($price)
+    {
+        $this->price = $price;
+    }
+
+    public function setStock($stock)
+    {
+        $this->stock = $stock;
+    }
+    
+    public function showDetails() 
     {
         echo "Product: " . $this->name . "<br>";
         echo "Price: ₹" . $this->price . "<br>";
