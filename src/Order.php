@@ -16,6 +16,11 @@ class Order
         $this->total = $total;
     }
 
+    public function __destruct()
+    {
+        echo "Order object destroyed.<br>";
+    }
+
     public function calculateTotal()
     {
         echo "Order ID: " . $this->orderId . "<br>";

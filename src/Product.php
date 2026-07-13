@@ -14,6 +14,11 @@ class Product
         $this->price = $price;
         $this->stock = $stock;
     }
+
+    public function __destruct()
+    {
+        echo "Product object destroyed.<br>";
+    }
     
     public function showDetails()
     {

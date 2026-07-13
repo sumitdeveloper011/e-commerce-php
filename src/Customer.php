@@ -15,6 +15,11 @@ class Customer
         $this->phone = $phone;
     }
 
+    public function __destruct()
+    {
+        echo "Customer object destroyed.<br>";
+    }
+
     public function register()
     {
         echo "Customer: " . $this->name . "<br>";
