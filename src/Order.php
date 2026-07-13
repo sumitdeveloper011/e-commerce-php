@@ -1,8 +1,20 @@
+<?php 
+
 class Order
 {
     public int $orderId;
     public string $status;
     public float $total;
+
+    public function __construct(
+        int $orderId,
+        string $status,
+        float $total
+    ) {
+        $this->orderId = $orderId;
+        $this->status = $status;
+        $this->total = $total;
+    }
 
     public function calculateTotal()
     {
@@ -20,5 +32,3 @@ class Order
 
     }
 }
-
-$order = new Order();
