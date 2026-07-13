@@ -36,4 +36,14 @@ class Product
     {
 
     }
+
+    public function updatePrice($newPrice)
+    {
+        $this->price = $newPrice;
+    }
+
+    public function sell($quantity)
+    {
+        $this->stock -= $quantity;
+    }
 }
