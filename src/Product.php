@@ -42,14 +42,26 @@ class Product
 
     public function setPrice($price)
     {
+        if ($price <= 0) {
+        return false;
+        }
+
         $this->price = $price;
+
+        return true;
     }
 
     public function setStock($stock)
     {
+        if ($stock < 0) {
+        return false;
+        }
+
         $this->stock = $stock;
+
+        return true;
     }
-    
+
     public function showDetails() 
     {
         echo "Product: " . $this->name . "<br>";
