@@ -20,10 +20,7 @@ abstract class Person
         return $this->email;
     }// Empty parent class for now
 
-    public function introduce() : void
-    {
-        echo "Hello, I am customer {$this->name}.";
-    }
+    abstract public function introduce();
 }
 
 class Customer extends Person
